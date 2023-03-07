@@ -3,25 +3,17 @@
 ;NASOBENIE
 
 section .data
-	x dw -20000
-	y dw 100
-	z dd 0
-
+	x1 dw aa
+	x2 dw bb
+	x3 dw cc
+    x4 dw dd
 section .text
 CMAIN:
 	push ebp
 	mov ebp,esp
 
-    ;z = x * x + 80 * y
-    
-    movsx eax,word[x]
-	imul eax
-    mov ebx, eax
-    
-    movzx eax,word[y]
-    imul eax,80
-    add ebx,eax
-    mov [z],ebx
+    mov eax, [x1]
+    mov eax
 
 
 	pop ebp

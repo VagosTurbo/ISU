@@ -7,6 +7,10 @@ section .data
     z db "AHOJ"
     klic dd 1001
 
+    a dd 5
+    b db 0
+
+
 section .text
 CMAIN:
 	push ebp
@@ -26,6 +30,11 @@ CMAIN:
     xor byte [z+1], al
     xor byte [z+2], al
     xor byte [z+3], al
+
+    ;a = 3*b
+    mov eax, [a]
+    shl eax, 1
+    add eax, [a]
 
 
 	
