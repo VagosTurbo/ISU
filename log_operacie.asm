@@ -10,6 +10,10 @@ section .data
     a dd 5
     b db 0
 
+    p db 12
+    r db 14
+    s dw 0
+    k db 50
 
 section .text
 CMAIN:
@@ -33,8 +37,24 @@ CMAIN:
 
     ;a = 3*b
     mov eax, [a]
-    shl eax, 1
+    shl eax, 2
     add eax, [a]
+
+    ;s = p + r
+    mov al, [p]
+    mov bl, [r]
+    add al,bl
+    adc ah, 0
+
+    mov dx, 0
+    mov dl, ah
+
+    
+    mov bl, [k]
+    shl bl, dl
+
+    add al,cl
+
 
 
 	
