@@ -17,7 +17,7 @@ CMAIN:
 	push ebp
 	mov ebp,esp
 
-    ;4321 -> 3142
+;4321 -> 3142
     mov eax, 0xa4a3a2a1
 
     rol ax, 8
